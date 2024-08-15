@@ -1,0 +1,155 @@
+/* основной файл стилей для страницы */
+
+header {
+    width: 1440px;
+    height: 120px;
+    background-color: #FFFFFF;
+    
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: auto;  /* высота букв (hug 20px) */ 
+    font-size: 15px;
+    font-weight: 400;   /* толщина шрифта */  
+}
+.top-header {            
+    height: 52px;       /* высота "контейнера" */
+    position: relative;
+}
+.top-header_line {
+    width: 1440px;
+    position: absolute; /* отступы относ. ближайшего relative. действует явно, не наследуется */
+    top: 52px;
+}
+/* статичный вариант
+.active_menu_line {
+    width: 132px;
+    position: absolute;
+    left: 60px;
+    border-top: 2px solid #760135;
+}
+*/
+.line {
+    border: 1px solid #E0E1E6;
+}
+.r-menu {
+    width: auto;        /* ширина с учетом содержимого (Hug в Figma) */
+    height: auto;         
+    position: absolute;
+
+    top: 16px;
+    left: 1071px;
+    display: flex;      /* расположение элементов в ряд: работает с gap */
+    gap: 16px;                
+}
+.phone-number {
+    width: auto;
+    font-weight: 600;   
+    line-height: 19.5px;
+    color: #760135;
+}
+.location {
+    width: auto;
+    display: flex;  
+    gap: 4px;           /* высчитано из макета. мне показалось, через gap лучше */           
+}
+.l-menu {
+    width: auto;        
+    height: auto;         
+    position: absolute;
+    
+    top: 16px;
+    left: 60px;
+    display: flex;
+    gap: 16px;
+    color: #8D8D8D;
+}
+.l-menu a {
+    text-decoration: none;  /* стандартный вид ссылок. не применяется к div */
+    color: inherit;         /* наследование цвета */
+    position: relative;     /* !!!! */
+}
+.l-menu a.active {
+    color: #313133;
+    font-weight: 500;
+    line-height: 19.5px;
+}
+.l-menu a.active::after {   /* выше реализована статичная полоса активного меню .active_menu_line - как в макете */
+    content: '';            /* это вариант с передвижением */
+    position: absolute;
+    top: 36px;
+    left: 0;
+    right: 0;
+    bottom: -2px;            
+    height: 2px;             
+    background-color: #760135;
+}
+.down-header { 
+    display: flex;
+    position: relative;
+    height: 68px;
+}
+.logo {
+    position: absolute;     /* переключились на позиционирование относительно down-header */
+    width: 130px;
+    height: 30px;
+    top: 19px;
+    left: 60px;
+}
+.left_menu {
+    position: absolute;
+    top: 22px;
+    left: 214px;
+    display: flex; 
+    gap: 16px;
+}
+.left_menu a {
+    text-decoration: none;
+    color: #0D0D0D;
+}
+.services {
+    display: flex;
+    gap: 8px;     
+}
+.right_menu {
+    position: absolute;
+    top: 22px;
+    left: 1072px;
+    display: flex;
+    gap: 16px;
+}
+.login {
+    display: flex;
+    gap: 3px; 
+    color: #760135;
+    font-weight: 600;
+}
+.login-icon {
+    position: relative;
+    top: -3px; 
+}
+.call {
+    display: flex;
+    gap: 8px;
+    color: #25B456;
+    font-weight: 600;
+}
+.breadcrumb {
+    position: absolute;
+    top: 136px;
+    left: 60px;
+    gap: 8px;
+
+    padding: 3.76px 5.33px 3.76px 5.48px;
+    color: #111111; 
+    
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 13px;
+    line-height: 16.9px;
+
+    content: icon;
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.5;
+    padding: 3.76px 5.33px 3.76px 5.48px;
+}
