@@ -60,7 +60,7 @@ git add .                                                       # добавит
 git commit -m "v1"                                              # создать коммит
 git push origin main                                            # отправить в репу
 
-git remote remove origin                                        #удалить удаленную репу
+git remote remove origin                                        # удалить удаленную репу
 ```
 
 ## Добавить SSH ключ
@@ -76,6 +76,7 @@ ssh-add "C:/Users/Alisa/.ssh/id_ed25519"
   - [Руководство по БЭМ](https://ru.bem.info/methodology/)
   - [Документация по Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
   - [Ридмики](https://github.com/GnuriaN/format-README)
+  - [Чиним SSH на windows](https://gist.github.com/bsara/5c4d90db3016814a3d2fe38d314f9c23)
 
 ## 🏅 Автор
 
